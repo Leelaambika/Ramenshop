@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tibetan Bowl</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    /* Franchise form styles */
+    .franchise-form {
+      max-width: 800px;
+      margin: 2rem auto 4rem;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .franchise-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #6a0d0d; /* maroon */
+    }
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .form-group {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.full-width {
+      flex: 1 1 100%;
+    }
+    .franchise-form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #6a0d0d; /* maroon */
+      font-size: 1rem;
+    }
+    .franchise-form input,
+    .franchise-form textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    .franchise-form input:focus,
+    .franchise-form textarea:focus {
+      outline: none;
+      border-color: #ffcc00; /* nice yellow */
+      box-shadow: 0 0 6px #ffcc00aa;
+    }
+    .franchise-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .franchise-form button {
+      background-color: #6a0d0d; 
+      color: #fff;
+      font-size: 16px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .franchise-form button:hover {
+      background-color: #520a0a;
+    }
+
+    header.site-header {
+      background-color: #000; 
+      padding: 10px 20px;
+      color: #fff;
+    }
+    header.site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header.site-header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header.site-header .logo img {
+      height: 40px;
+      width: auto;
+    }
+    header.site-header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    header.site-header nav ul.nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    header.site-header nav ul.nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      transition: background 0.3s ease;
+      border-radius: 4px;
+    }
+    header.site-header nav ul.nav-menu li a:hover,
+    header.site-header nav ul.nav-menu li a:focus {
+      background-color: #6a0d0d; 
+      color: #ffcc00; 
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Tibetan Bowl Logo" />
+        <h1>Tibetan Bowl</h1>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<section class="hero">
+    <div class="overlay">
+      <h1>Spice up your soul</h1>
+      <p>Authentic Tibetan ramen served hot and fresh</p>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Chef's Specials</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/Ramen.jpg" alt="Spicy Chicken Momo" />
+        <h3>Spicy Chicken Momo</h3>
+        <p>Hot and crispy dumplings filled with tender chicken</p>
+        <span>₹139</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/Fries.jpg" alt="Veg Cheese Corn Momo" />
+        <h3>Veg Cheese Corn Momo</h3>
+        <p>Creamy cheese and corn wrapped in soft momo sheets</p>
+        <span>₹119</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/Momo.jpg" alt="Tandoori Momo" />
+        <h3>Pan-Fried Tandoori Momo</h3>
+        <p>Tandoori spice coated momos grilled to perfection</p>
+        <span>₹129</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="franchise-request">
+    <h2>Franchise Inquiry</h2>
+    <p>Want to open your own Tibetan Bowl store? Fill out the form below and we'll get in touch!</p>
+
+    <form
+      class="franchise-form"
+      action="https://formspree.io/f/your-form-id"
+      method="POST"
+    >
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name"><i class="fa fa-user"></i> Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email"><i class="fa fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="_replyto" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone"><i class="fa fa-phone"></i> Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="location"><i class="fa fa-map-marker"></i> Preferred Location</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message"><i class="fa fa-comments"></i> Additional Info</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+      </div>
+
+      <button type="submit">
+        <i class="fa fa-paper-plane"></i> Submit Inquiry
+      </button>
+    </form>
+  </section>
+
+<footer style="background-color: #000; color: #fff; padding: 40px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+
+    <!-- Logo and tagline -->
+    <div style="flex: 1 1 250px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="images/logo.webp" alt="Tibetan Bowl Logo" style="height: 50px;" />
+        <h3 style="margin: 0; font-size: 1.5rem;">Tibetan Bowl</h3>
+      </div>
+      <p style="margin-top: 10px; font-size: 0.95rem;">Making exotic dishes affordable for everyone.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 150px;">
+      <h4 style="margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid #555;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+        <li><a href="about.html" style="color: #fff; text-decoration: none;">About Us</a></li>
+        <li><a href="menu.html" style="color: #fff; text-decoration: none;">Menu</a></li>
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social -->
+    <div style="flex: 1 1 250px;">
+      <h4 style="margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid #555;">Contact Us</h4>
+      <p style="margin: 5px 0;"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
+      <p style="margin: 5px 0;"><i class="fa fa-phone"></i> &nbsp; +91 99999 99999</p>
+      <p style="margin: 5px 0;"><i class="fa fa-envelope"></i> &nbsp; hello@tibetanbowl.com</p>
+
+      <div style="margin-top: 15px;">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin-right: 12px;"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin-right: 12px;"><i class="fa fa-instagram fa-lg"></i></a>
+        <a href="https://youtube.com" target="_blank" style="color: #fff;"><i class="fa fa-youtube fa-lg"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div style="text-align: center; padding-top: 20px; font-size: 0.85rem; border-top: 1px solid #444; margin-top: 30px;">
+    © 2025 Tibetan Bowl. All rights reserved.
+  </div>
+</footer>
+
+
+  <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-button">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+</body>
+</html>
+

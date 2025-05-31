@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Tibetan Bowl</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mouldy+Cheese&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #800000;
+    }
+    h1 {
+      margin: 0;
+      font-family: 'Mouldy Cheese', cursive;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5em;
+      font-family: 'Mouldy Cheese', cursive;
+      margin: 1em 0;
+    }
+    .menu-category {
+      max-width: 1100px;
+      margin: 3em auto;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 40px;
+      padding: 20px 0;
+    }
+    /* Reverse layout for even children */
+    .menu-category:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .menu-category img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex: 1;
+    }
+    .menu-category.reverse .menu-details {
+      text-align: right;
+      align-items: flex-end;
+    }
+    .menu-details {
+      flex: 1;
+      padding: 20px;
+    }
+    .menu-category:nth-child(2) .menu-details,
+    .menu-category:nth-child(5) .menu-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end; /* Align text block to the right */
+      text-align: right; /* Right-align text inside */
+      padding-left: 20px; /* small padding from image */
+      padding-right: 0; /* remove default right padding */
+     }
+    .menu-details h2 {
+      font-size: 2em;
+      color: #800000;
+      margin-bottom: 0.5em;
+      font-family: 'Mouldy Cheese', cursive;
+      text-align: left;
+    }
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .menu-item {
+      background-color: #f9f9f9;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .menu-item h3 {
+      margin: 0 0 0.4em;
+      font-size: 1.2em;
+      color: #800000;
+    }
+    .menu-item .price {
+      color: #b22222;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5em;
+    }
+    footer {
+      text-align: left;
+      padding: 30px;
+      font-size: 0.9em;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Tibetan Bowl Logo" />
+        <h1>Tibetan Bowl</h1>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="menu-category">
+    <img src="images/noodles.jpg" alt="Non-Veg Cravings" />
+    <div class="menu-details">
+      <h2>Non-Veg Cravings</h2>
+      <div class="menu-items">
+        <div class="menu-item"><h3>Chicken Nuggets</h3><span class="price">₹129</span></div>
+        <div class="menu-item"><h3>Chicken Finger</h3><span class="price">₹129</span></div>
+        <div class="menu-item"><h3>Chicken Popcorn</h3><span class="price">₹129</span></div>
+        <div class="menu-item"><h3>Chicken Crispy Wings</h3><span class="price">₹139</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <img src="images/noodles.jpg" alt="Pan Asian Bowl" />
+    <div class="menu-details">
+      <h2>Pan Asian Bowl</h2>
+      <div class="menu-items">
+        <div class="menu-item"><h3>Chicken Wonton Soup (CHINA)</h3><span class="price">₹129</span></div>
+        <div class="menu-item"><h3>Veg Ramen (JAPAN)</h3><span class="price">₹169</span></div>
+        <div class="menu-item"><h3>Chicken Ramen (JAPAN)</h3><span class="price">₹189</span></div>
+        <div class="menu-item"><h3>Kimchi Spicy Ramyun (KOREA)</h3><span class="price">₹199</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <img src="images/noodles.jpg" alt="Combos" />
+    <div class="menu-details">
+      <h2>Combos</h2>
+      <div class="menu-items">
+        <div class="menu-item"><h3>Peri Peri Fries + Fried Veg Momo</h3><span class="price">₹149</span></div>
+        <div class="menu-item"><h3>Peri Peri Fries + Fried Chicken Momo</h3><span class="price">₹159</span></div>
+        <div class="menu-item"><h3>French Fry + Chicken Mowopav + Mint Mojito</h3><span class="price">₹199</span></div>
+        <div class="menu-item"><h3>French Fry + Veg Mowopav + Mint Mojito</h3><span class="price">₹209</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <img src="images/noodles.jpg" alt="Add-Ons" />
+    <div class="menu-details">
+      <h2>Add-Ons</h2>
+      <div class="menu-items">
+        <div class="menu-item"><h3>Boiled Egg</h3><span class="price">₹15</span></div>
+        <div class="menu-item"><h3>Egg Fried</h3><span class="price">₹25</span></div>
+        <div class="menu-item"><h3>Cheese Slice</h3><span class="price">₹20</span></div>
+        <div class="menu-item"><h3>Cheese Shredded</h3><span class="price">₹30</span></div>
+        <div class="menu-item"><h3>Mint Mojito Add-on</h3><span class="price">₹50</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background-color: #000; color: #fff; padding: 40px 20px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+      <!-- Logo and tagline -->
+      <div style="flex: 1 1 250px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="images/logo.webp" alt="Tibetan Bowl Logo" style="height: 50px;" />
+          <h3 style="margin: 0; font-size: 1.5rem;">Tibetan Bowl</h3>
+        </div>
+        <p style="margin-top: 10px; font-size: 0.95rem;">Making exotic dishes affordable for everyone.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1 1 150px;">
+        <h4 style="margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid #555;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #fff; text-decoration: none;">About Us</a></li>
+          <li><a href="menu.html" style="color: #fff; text-decoration: none;">Menu</a></li>
+          <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div style="flex: 1 1 250px;">
+        <h4 style="margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid #555;">Contact Us</h4>
+        <p style="margin: 5px 0;"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
+        <p style="margin: 5px 0;"><i class="fa fa-phone"></i> &nbsp; +91 99999 99999</p>
+        <p style="margin: 5px 0;"><i class="fa fa-envelope"></i> &nbsp; hello@tibetanbowl.com</p>
+
+        <div style="margin-top: 15px;">
+          <a href="https://facebook.com" target="_blank" style="color: #fff; margin-right: 12px;"><i class="fa fa-facebook fa-lg"></i></a>
+          <a href="https://instagram.com" target="_blank" style="color: #fff; margin-right: 12px;"><i class="fa fa-instagram fa-lg"></i></a>
+          <a href="https://youtube.com" target="_blank" style="color: #fff;"><i class="fa fa-youtube fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div style="text-align: center; padding-top: 20px; font-size: 0.85rem; border-top: 1px solid #555;">
+      &copy; 2024 Tibetan Bowl. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
